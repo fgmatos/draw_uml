@@ -1,7 +1,7 @@
 module DrawUml
   module Configure
     class << self
-      attr_accessor :diagram_extension, :diagram_path, :static_path, :image_path
+      attr_accessor :diagram_extension, :diagram_path, :static_path, :image_path, :image_format
 
       def setup
         keys.each do |key|
@@ -12,7 +12,11 @@ module DrawUml
       end
 
       def keys
-        @keys ||= %i[diagram_extension diagram_path static_path image_path]
+        @keys ||= %i[diagram_extension diagram_path static_path image_path image_format]
+      end
+      
+      def image_format
+        @image_format ||= DrawUml::Default.image_format
       end
 
       def source_path

@@ -23,7 +23,7 @@ module DrawUml
         unless entry.nil?
           diagram = DrawUml::Diagram.new(DrawUml::Configure.dest_path)
           diagram.create(entry.path, entry.id)
-          path = File.join(DrawUml::Configure.image_path, entry.id + '.png')
+          path = File.join(DrawUml::Configure.image_path, entry.id + '.'+ DrawUml::Configure.image_format.to_s)
         end
         path
       end
