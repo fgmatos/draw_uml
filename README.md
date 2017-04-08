@@ -23,7 +23,7 @@ Drawing the Unified Modeling Language of Rack.
 Add this line to your application's Gemfile:
 
 ```
-gem 'draw_uml'
+gem 'draw_uml', :git => 'https://github.com/fgmatos/draw_uml'
 ```
 
 And then execute:
